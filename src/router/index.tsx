@@ -5,21 +5,23 @@ import {
 import history from "./history";
 import {routes} from "./routes";
 import {MainLayout} from "../layout/main-layout";
+import {createBrowserHistory} from 'history'
 
 
-export const AppRouter = () => (
-    <BrowserRouter history={history}>
-        <Switch>
-            {
-                routes.map(({path, exact, component: Component}) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        exact={exact}
-                        render={() => <MainLayout> <Component /> </MainLayout>}
-                    />
-                ))
-            }
-        </Switch>
-    </BrowserRouter>
-);
+export const AppRouter = () => {
+    const history = createBrowserHistory();
+    return (
+            <Switch>
+                {
+                    routes.map(({path, layout: Layout, exact, component: Component}) => (
+                        <Route
+                            key={path}
+                            path={path}
+                            exact={exact}
+                            render={() => <Layout> <Component /> </Layout> }
+                        />
+                    ))
+                }
+            </Switch>
+    )
+};

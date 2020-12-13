@@ -37,8 +37,8 @@ export const Chat: FC = () => {
     ]
     return (
         <div className="chat">
-            {chatters.map((chatter) => (
-                <div className="chat__wrapper">
+            {chatters.map((chatter, i) => (
+                <div key={i} className="chat__wrapper">
                     <div className="chat__profile profile">
                         <img src={chatter.profilepic} alt="profilePic" />
                         <span className="profile__info">{chatter.username}</span>

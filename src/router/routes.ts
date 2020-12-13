@@ -1,22 +1,31 @@
 import {Routes} from "../components/routes";
-import {PageLinks} from "./links";
-import {PlacesNearby} from "../components/places-nearby/places-nearby";
-import {Chat} from "../components/chat/chat";
+import {PlacesNearby} from "../components/places-nearby";
+import {Chat} from "../components/chat";
+import {MainLayout} from "../layout/main-layout";
 
 export const routes = [
     {
         path: '/places',
-        exact: true,
+        exact: false,
+        layout: MainLayout,
         component: PlacesNearby,
     },
     {
         path: '/chat',
-        exact: true,
+        exact: false,
+        layout: MainLayout,
         component: Chat,
+    },
+    {
+        path: '/aaa',
+        exact: true,
+        layout: MainLayout,
+        component: Routes,
     },
     {
         path: '/',
         exact: true,
+        layout: MainLayout,
         component: Routes,
     },
 ]

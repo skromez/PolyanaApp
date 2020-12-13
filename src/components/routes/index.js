@@ -17,17 +17,17 @@ export const Routes = () => {
 
     const handlers = useSwipeable({
         onSwipedLeft: () => {
-            if (activeIndex === 0) {
-                setActiveIndex(nodesArray.length -1)
-            } else {
-                setActiveIndex(activeIndex - 1)
-            }
-        },
-        onSwipedRight: () => {
             if (activeIndex === nodesArray.length - 1) {
                 setActiveIndex(0)
             } else {
                 setActiveIndex(activeIndex + 1)
+            }
+        },
+        onSwipedRight: () => {
+            if (activeIndex === 0) {
+                setActiveIndex(nodesArray.length - 1)
+            } else {
+                setActiveIndex(activeIndex - 1)
             }
         },
         preventDefaultTouchmoveEvent: true,
@@ -42,21 +42,37 @@ export const Routes = () => {
         .range([0, height]);
 
     const nodesArray = [
-           [
-               { x: 45, y: 15, route: 'остановка 6', black: true, dot: true, img: wolfrock },
-               { x: 35, y: 40, route: 'остановка 5', dot: true, img: wolfrock },
-               { x: 50, y: 62, route: 'остановка 4', transition: true, img: wolfrock },
-               { x: 60, y: 65, route:'остановка 3', img: wolfrock },
-               { x: 40, y: 85, route: 'остановка 2', white: true, transition: true, img: wolfrock },
-               { x: 33, y: 80, route: 'остановка 1', white: true, transition: true, img: wolfrock }
-           ],
-           [
-               { x: 45, y: 15, transition: true, black: true, route: 'остановка 5', img: wolfrock },
-               { x: 28, y: 5, black: true, route: 'остановка 4', img: wolfrock },
-               { x: 12, y: 37, route:'остановка 3', img: wolfrock },
-               { x: 23, y: 81, route: 'остановка 2', white: true, transition: true, img: wolfrock },
-               { x: 33, y: 80, route: 'остановка 1', white: true, img: wolfrock }
-           ]
+        [
+            { x: 45, y: 15, route: 'остановка 6', black: true, dot: true, img: wolfrock },
+            { x: 35, y: 40, route: 'остановка 5', img: wolfrock },
+            { x: 50, y: 62, route: 'остановка 4', transition: true, img: wolfrock },
+            { x: 60, y: 65, route:'остановка 3', img: wolfrock },
+            { x: 40, y: 85, route: 'остановка 2', white: true, transition: true, img: wolfrock },
+            { x: 33, y: 80, route: 'остановка 1', white: true, transition: true, img: wolfrock }
+        ],
+        [
+            { x: 45, y: 15, transition: true, black: true, route: 'остановка 5', img: wolfrock },
+            { x: 28, y: 5, black: true, route: 'остановка 4', img: wolfrock },
+            { x: 12, y: 37, route:'остановка 3', img: wolfrock },
+            { x: 23, y: 81, route: 'остановка 2', white: true, transition: true, img: wolfrock },
+            { x: 33, y: 80, route: 'остановка 1', white: true, img: wolfrock }
+        ],
+        [
+            { x: 45, y: 15, black: true, route: 'остановка 5', img: wolfrock },
+            { x: 35, y: 40, route: 'остановка 5', dot: true, img: wolfrock },
+            { x: 50, y: 62, route:'остановка 3', transition: true, img: wolfrock },
+            { x: 43, y: 60, route: 'остановка 2', img: wolfrock },
+            { x: 33, y: 80, route: 'остановка 1', white: true, img: wolfrock }
+        ],
+        [
+            { x: 45, y: 15, route: 'остановка 7', black: true, dot: true, img: wolfrock },
+            { x: 35, y: 40, route: 'остановка 6', transition: true, img: wolfrock },
+            { x: 50, y: 47, route: 'остановка 5', img: wolfrock },
+            { x: 63, y: 60, route: 'остановка 4', transition: true, img: wolfrock },
+            { x: 60, y: 65, route: 'остановка 3', img: wolfrock },
+            { x: 40, y: 85, route: 'остановка 2', white: true, transition: true, img: wolfrock },
+            { x: 33, y: 80, route: 'остановка 1', white: true, transition: true, img: wolfrock }
+        ],
     ]
 
     const linksArray = [
@@ -70,8 +86,22 @@ export const Routes = () => {
         [
             { s: 0, d: 1, time: 10 },
             { s: 1, d: 2, time: 15 },
-            { s: 2, d: 3, time: 10 },
+            { s: 2, d: 3, time: 30 },
             { s: 3, d: 4, time: 25 },
+        ],
+        [
+            { s: 0, d: 1, time: 10 },
+            { s: 1, d: 2, time: 15 },
+            { s: 2, d: 3, time: 5 },
+            { s: 3, d: 4, time: 15 },
+        ],
+        [
+            { s: 0, d: 1, time: 10 },
+            { s: 1, d: 2, time: 1 },
+            { s: 2, d: 3, time: 7 },
+            { s: 3, d: 4, time: 8 },
+            { s: 4, d: 5, time: 25 },
+            { s: 5, d: 6, time: 25 },
         ],
     ]
 
@@ -85,6 +115,14 @@ export const Routes = () => {
     return (
         <div className="container">
             <div {...handlers} className="map">
+                <div className="map__bullets">
+                    {nodesArray.map((_, i) => {
+                        const className = `bullet ${activeIndex === i ? 'bullet--active' : ''}`
+                        return (
+                            <div className={className} />
+                        )
+                    })}
+                </div>
                 {nodesArray.map((nodes, nodeIndex ) => (
                     <svg
                         key={nodeIndex}
@@ -119,6 +157,7 @@ export const Routes = () => {
                             let fillColor = 'red'
                             let strokeColor = 'red'
                             let strokeWidth = 0
+                            let radius = 10
                             if (node.white) {
                                 fillColor = 'white';
                                 strokeWidth = 8
@@ -130,7 +169,8 @@ export const Routes = () => {
                             if (nodeIndex !== activeIndex) {
                                 strokeColor = '#C4C4C4'
                                 fillColor = 'white';
-                                strokeWidth = 8
+                                strokeWidth = 6
+                                radius = 7
                             }
                             return (
                                 <circle
@@ -142,7 +182,7 @@ export const Routes = () => {
                                     key={i}
                                     cx={xScale(node.x)}
                                     cy={yScale(node.y)}
-                                    r="10"
+                                    r={radius}
                                     stroke={strokeColor}
                                     strokeWidth={strokeWidth}
                                     fill={fillColor}
@@ -155,12 +195,13 @@ export const Routes = () => {
             <div className="approximate-time">
                 <div className="title">{nodesArray[activeIndex][nodesArray[activeIndex].length - 1].route} - {nodesArray[activeIndex][0].route}</div>
                 <div className="time">{linksArray[activeIndex].reduce((prev, curr) => prev + curr.time, 0)} мин</div>
-                {nodesArray[activeIndex].map((node) => (
-                    <div style={{position: "absolute", left: `${node.y}%`}} className="route-container">
-                        <img className="route-icon" src="https:/placehold.it/30x30" alt=""/>
-                        <span className="route-name">{node.route}</span>
-                    </div>
-                ))}
+                {nodesArray[activeIndex].map((node, i) => {
+                    return (
+                        <div style={{position: "absolute", left: `${node.y}%`}} className="route-container">
+                            <span className="route-name">{node.route}</span>
+                        </div>
+                    )
+                })}
                 <svg style={{marginTop: '100px'}} width="100%" height="100px">
                     {linksArray[activeIndex].map((link, i) => (
                         <>
@@ -205,7 +246,7 @@ export const Routes = () => {
                     ))}
                 </div>
             </div>
-            <Collapse className="collapse" expandIconPosition="right" bordered={false}>
+            <Collapse defaultActiveKey={['1']} className="collapse" expandIconPosition="right" bordered={false}>
                 <Panel header={header()} key="1">
                     <div className="panel">
                         <div className="dashed-line"></div>

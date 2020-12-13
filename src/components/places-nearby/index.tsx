@@ -36,8 +36,8 @@ export const PlacesNearby: FC = () => {
     return (
         <div className="places">
             <header className="places__header">Места рядом</header>
-            {places.map((place) => (
-                <div className="places__card card" style={{backgroundImage: `url(${place.img})`}}>
+            {places.map((place, i) => (
+                <div key={i} className="places__card card" style={{backgroundImage: `url(${place.img})`}}>
                     <div className="card__title">
                         <span>{place.name}</span>
                         <span>{place.category}</span>

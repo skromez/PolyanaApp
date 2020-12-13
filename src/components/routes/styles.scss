@@ -7,6 +7,27 @@
   height: 625px;
   position: relative;
   background: url("../../assets/images/background.svg");
+
+  &__bullets {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+  }
+}
+
+.bullet {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+  &--active {
+    background-color: gray;
+  }
 }
 
 .svg {
@@ -53,7 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 48%;
+    top: 34%;
     font-size: 20px;
     min-width: 160px;
     transform: translateX(-51.5%) rotate(-90deg);
@@ -61,7 +82,7 @@
 
   .route-name {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .route-icon {

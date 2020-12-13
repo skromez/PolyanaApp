@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import './styles.scss'
 import {PageLinks} from "../../router/links";
-import history from "../../router/history";
+import {useHistory} from "react-router-dom";
 
 export const OverlayButtons: FC = () => {
+    const history = useHistory()
     const buttonsArray = [
             {
                 color: '#FFE456',
@@ -18,12 +19,12 @@ export const OverlayButtons: FC = () => {
             {
                 color: 'white',
                 text: 'интср',
-                route: '/routes'
+                route: '/'
             },
             {
                 color: '#FD3E3E',
                 text: 'Еда',
-                route: '/routes'
+                route: '/aaa'
             },
         ];
     return (

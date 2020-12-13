@@ -2,45 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2969921-7d0f-4ef0-8a0d-8c1009160f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/polyana-react.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/background.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/burger-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/intermediate1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/intermediate2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/rose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/wolf-rock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/chat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/overlay-buttons/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/overlay-buttons/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/places-nearby/places-nearby.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/places-nearby/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/routes/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/main-layout/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/main-layout/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/history.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/links.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/overlay-buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/overlay-buttons/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/places-nearby/places-nearby.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/places-nearby/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/routes/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/routes/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607787824429</updated>
       <workItem from="1607787828519" duration="3927000" />
-      <workItem from="1607791791595" duration="36018000" />
+      <workItem from="1607791791595" duration="42165000" />
     </task>
     <servers />
   </component>
