@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/polyana-react/static/css/main.39de8cf3.chunk.css",
-    "main.js": "/polyana-react/static/js/main.29cddec2.chunk.js",
-    "main.js.map": "/polyana-react/static/js/main.29cddec2.chunk.js.map",
+    "main.js": "/polyana-react/static/js/main.f78e575d.chunk.js",
+    "main.js.map": "/polyana-react/static/js/main.f78e575d.chunk.js.map",
     "runtime-main.js": "/polyana-react/static/js/runtime-main.e803a84c.js",
     "runtime-main.js.map": "/polyana-react/static/js/runtime-main.e803a84c.js.map",
     "static/css/2.b00201c5.chunk.css": "/polyana-react/static/css/2.b00201c5.chunk.css",
-    "static/js/2.3300dc83.chunk.js": "/polyana-react/static/js/2.3300dc83.chunk.js",
-    "static/js/2.3300dc83.chunk.js.map": "/polyana-react/static/js/2.3300dc83.chunk.js.map",
+    "static/js/2.b7300484.chunk.js": "/polyana-react/static/js/2.b7300484.chunk.js",
+    "static/js/2.b7300484.chunk.js.map": "/polyana-react/static/js/2.b7300484.chunk.js.map",
     "index.html": "/polyana-react/index.html",
     "static/css/2.b00201c5.chunk.css.map": "/polyana-react/static/css/2.b00201c5.chunk.css.map",
     "static/css/main.39de8cf3.chunk.css.map": "/polyana-react/static/css/main.39de8cf3.chunk.css.map",
-    "static/js/2.3300dc83.chunk.js.LICENSE.txt": "/polyana-react/static/js/2.3300dc83.chunk.js.LICENSE.txt",
+    "static/js/2.b7300484.chunk.js.LICENSE.txt": "/polyana-react/static/js/2.b7300484.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/polyana-react/static/media/background.751ba37f.svg",
     "static/media/beseda.e400a2ba.jfif": "/polyana-react/static/media/beseda.e400a2ba.jfif",
     "static/media/bgempty.ea90d3de.svg": "/polyana-react/static/media/bgempty.ea90d3de.svg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.e803a84c.js",
     "static/css/2.b00201c5.chunk.css",
-    "static/js/2.3300dc83.chunk.js",
+    "static/js/2.b7300484.chunk.js",
     "static/css/main.39de8cf3.chunk.css",
-    "static/js/main.29cddec2.chunk.js"
+    "static/js/main.f78e575d.chunk.js"
   ]
 }
