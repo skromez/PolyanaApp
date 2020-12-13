@@ -16,7 +16,6 @@ import diagram3 from '../../assets/images/diagram3.svg';
 import diagram4 from '../../assets/images/diagram4.svg';
 import camera from '../../assets/images/camera.svg';
 import './styles.scss'
-import {axiosInstance} from "../../utils/axios";
 
 const { Panel } = Collapse;
 
@@ -147,7 +146,6 @@ export const Routes = () => {
                         })}
                     </div>
                     {nodesArray.map((nodes, nodeIndex ) => {
-                        console.log(nodes)
                     return (
                         <svg
                             key={nodeIndex}

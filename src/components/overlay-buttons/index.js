@@ -73,7 +73,6 @@ export const OverlayButtons = ({randomIndex}) => {
             route: false
         },
     ];
-    console.log(randomIndex)
     const buttons = [buttonsArray, buttonsArray2, buttonsArray3]
     return (
         <div className="ant-modal-content">
