@@ -1,3 +1,7 @@
+.main {
+  position: relative;
+}
+
 .header {
   padding: 0 20px;
   position: fixed;
@@ -7,4 +11,18 @@
   justify-content: center;
   height: 70px;
   background-color: white;
+}
+
+.superbutton {
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  &--opened {
+    visibility:visible;
+    opacity:1;
+  }
 }

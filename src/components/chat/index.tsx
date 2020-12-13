@@ -64,7 +64,7 @@ export const Chat: FC = () => {
                     </div>
                 </div>
             ))}
-            <button className="chat__button">Добавить в группу</button>
+            <button onClick={() => window.open('https://t.me/joinchat/CXHQeBnVmgPBa_4awc7WCA', '_blank')} className="chat__button">Добавить в группу</button>
         </div>
     )
 }

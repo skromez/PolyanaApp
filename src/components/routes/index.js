@@ -242,7 +242,7 @@ export const Routes = () => {
                 </svg>
             </div>
             <div className="prediction">
-                <span className="title">Прогноз</span>
+                <span className="title">Прогноз ожиданий</span>
                 <div className="container">
                     {predictions.map((prediction) => (
                         <div key={prediction.time} className="prediction__item item">
