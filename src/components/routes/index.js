@@ -24,8 +24,6 @@ export const Routes = () => {
     const width = window.innerWidth
     const height = 600
     const [isOpen, setIsOpen] = useState(false);
-    const [nodesArray, setNodesArray] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const [route, setRoute] = useState('');
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -56,116 +54,100 @@ export const Routes = () => {
         .domain([0, 100])
         .range([0, height]);
 
-    // let nodesArray = [
-    //     [
-    //         { x: 45, y: 15, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
-    //         { x: 35, y: 40, route: 'Подсадка 1600м', dot: true, img: wolfrock, noLive: true },
-    //         { x: 50, y: 62, route: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
-    //         { x: 43, y: 60, route: 'Волчья Скала 1350м', img: wolfrock, noLive: true },
-    //         { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock }
-    //     ],
-    //     [
-    //         { x: 45, y: 15, route: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
-    //         { x: 35, y: 40, route: 'Подсадка 1600м', img: wolfrock, noLive: true },
-    //         { x: 50, y: 62, route: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
-    //         { x: 60, y: 65, route: 'Беседа 1350м', img: wolfrock, noLive: true },
-    //         { x: 40, y: 85, route: 'Беседа 940м', white: true, transition: true, img: beseda },
-    //         { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
-    //     ],
-    //     [
-    //         { x: 45, y: 15, route: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
-    //         { x: 35, y: 40, route: 'Подсадка 1600м', transition: true, img: podsadka },
-    //         { x: 50, y: 47, route: 'Квартет 1600м', img: wolfrock, noLive: true },
-    //         { x: 63, y: 60, route: 'Квартет 1350м', transition: true, img: kvartet },
-    //         { x: 60, y: 65, route: 'Беседа 1350м', img: wolfrock, noLive: true },
-    //         { x: 40, y: 85, route: 'Беседа 940м', white: true, transition: true, img: beseda },
-    //         { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
-    //     ],
-    //     [
-    //         { x: 45, y: 15, transition: true, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
-    //         { x: 28, y: 5, black: true, route: 'Тундра 2220м', img: wolfrock, noLive: true },
-    //         { x: 12, y: 37, route: 'Тундра 1645м', img: tundra },
-    //         { x: 23, y: 81, route: 'Дриада 940м', white: true, transition: true, img: driada },
-    //         { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock, noLive: true }
-    //     ],
-    // ]
-    const getRoutes = async () => {
-        try {
-            const {data} = await axiosInstance.get('/routes')
-            console.log(data)
-            const result = data.map((t) => t.tracks)
-            console.log(result[0][0].x)
-            console.log(result[0].x)
-            setNodesArray([...result])
-            setIsLoading(false)
-        } catch (e) {
-            console.log(e)
-        }
-    }
-    useEffect(() => {
-        getRoutes();
-    }, [])
-
-    const diagramSvgArray = [
-        {
-            url: diagram2
-        },
-        {
-            url: diagram4
-        },
-        {
-            url: diagram1
-        },
-        {
-            url: diagram3
-        },
-    ]
-
-    const linksArray = [
+    const nodesArray = [
         [
-            { s: 0, d: 1, time: 10 },
-            { s: 1, d: 2, time: 15 },
-            { s: 2, d: 3, time: 5 },
-            { s: 3, d: 4, time: 15 },
+            { x: 45, y: 15, black: true, name: 'Роза Пик 2320м', img: wolfrock, noLive: true },
+            { x: 35, y: 40, name: 'Подсадка 1600м', dot: true, img: wolfrock, noLive: true },
+            { x: 50, y: 62, name: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
+            { x: 43, y: 60, name: 'Волчья Скала 1350м', img: wolfrock, noLive: true },
+            { x: 33, y: 80, name: 'Волчья Скала 940м', white: true, img: wolfrock }
         ],
         [
-            { s: 0, d: 1, time: 14 },
-            { s: 1, d: 2, time: 10 },
-            { s: 2, d: 3, time: 2 },
-            { s: 3, d: 4, time: 68 },
-            { s: 4, d: 5, time: 15 }
+            { x: 45, y: 15, name: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
+            { x: 35, y: 40, name: 'Подсадка 1600м', img: wolfrock, noLive: true },
+            { x: 50, y: 62, name: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
+            { x: 60, y: 65, name: 'Беседа 1350м', img: wolfrock, noLive: true },
+            { x: 40, y: 85, name: 'Беседа 940м', white: true, transition: true, img: beseda },
+            { x: 33, y: 80, name: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
         ],
         [
-            { s: 0, d: 1, time: 10 },
-            { s: 1, d: 2, time: 1 },
-            { s: 2, d: 3, time: 7 },
-            { s: 3, d: 4, time: 8 },
-            { s: 4, d: 5, time: 25 },
-            { s: 5, d: 6, time: 25 },
+            { x: 45, y: 15, name: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
+            { x: 35, y: 40, name: 'Подсадка 1600м', transition: true, img: podsadka },
+            { x: 50, y: 47, name: 'Квартет 1600м', img: wolfrock, noLive: true },
+            { x: 63, y: 60, name: 'Квартет 1350м', transition: true, img: kvartet },
+            { x: 60, y: 65, name: 'Беседа 1350м', img: wolfrock, noLive: true },
+            { x: 40, y: 85, name: 'Беседа 940м', white: true, transition: true, img: beseda },
+            { x: 33, y: 80, name: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
         ],
         [
-            { s: 0, d: 1, time: 10 },
-            { s: 1, d: 2, time: 15 },
-            { s: 2, d: 3, time: 30 },
-            { s: 3, d: 4, time: 25 },
+            { x: 45, y: 15, transition: true, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
+            { x: 28, y: 5, black: true, route: 'Тундра 2220м', img: wolfrock, noLive: true },
+            { x: 12, y: 37, route: 'Тундра 1645м', img: tundra },
+            { x: 23, y: 81, route: 'Дриада 940м', white: true, transition: true, img: driada },
+            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock, noLive: true }
         ],
     ]
 
-    const durations = [59, 61, 109, 130]
+        const diagramSvgArray = [
+            {
+                url: diagram2
+            },
+            {
+                url: diagram4
+            },
+            {
+                url: diagram1
+            },
+            {
+                url: diagram3
+            },
+        ]
 
-    return !isLoading && (
-        <div className="container">
-            <div {...handlers} className="map">
-                <div className="map__bullets">
-                    {!isLoading && nodesArray.map((_, i) => {
-                        const className = `bullet ${activeIndex === i ? 'bullet--active' : ''}`
-                        return (
-                            <div className={className} />
-                        )
-                    })}
-                </div>
-                {!isLoading && nodesArray.map((nodes, nodeIndex ) => {
-                    console.log(nodes)
+        const linksArray = [
+            [
+                { s: 0, d: 1, time: 10 },
+                { s: 1, d: 2, time: 15 },
+                { s: 2, d: 3, time: 5 },
+                { s: 3, d: 4, time: 15 },
+            ],
+            [
+                { s: 0, d: 1, time: 14 },
+                { s: 1, d: 2, time: 10 },
+                { s: 2, d: 3, time: 2 },
+                { s: 3, d: 4, time: 68 },
+                { s: 4, d: 5, time: 15 }
+            ],
+            [
+                { s: 0, d: 1, time: 10 },
+                { s: 1, d: 2, time: 1 },
+                { s: 2, d: 3, time: 7 },
+                { s: 3, d: 4, time: 8 },
+                { s: 4, d: 5, time: 25 },
+                { s: 5, d: 6, time: 25 },
+            ],
+            [
+                { s: 0, d: 1, time: 10 },
+                { s: 1, d: 2, time: 15 },
+                { s: 2, d: 3, time: 30 },
+                { s: 3, d: 4, time: 25 },
+            ],
+        ]
+
+        const durations = [59, 61, 109, 130]
+
+        return (
+            <div className="container">
+                <div {...handlers} className="map">
+                    <div className="map__bullets">
+                        {nodesArray.map((_, i) => {
+                            const className = `bullet ${activeIndex === i ? 'bullet--active' : ''}`
+                            return (
+                                <div className={className} />
+                            )
+                        })}
+                    </div>
+                    {nodesArray.map((nodes, nodeIndex ) => {
+                        console.log(nodes)
                     return (
                         <svg
                             key={nodeIndex}
@@ -182,7 +164,7 @@ export const Routes = () => {
                                     strokeColor = '#ABAACF'
                                     strokeDash = 7;
                                 }
-                                return !isLoading && (
+                                return (
                                     <line
                                         style={{zIndex: nodeIndex === activeIndex ? 5 : 0}}
                                         key={i}
@@ -220,7 +202,7 @@ export const Routes = () => {
                                         style={{zIndex: nodeIndex === activeIndex ? 5 : 0}}
                                         onClick={() => {
                                             setIsOpen(true)
-                                            setRoute(node.route)
+                                            setRoute(node.name)
                                         }}
                                         key={i}
                                         cx={xScale(node.x)}
@@ -238,19 +220,17 @@ export const Routes = () => {
             </div>
             <div className="approximate-time">
                 <img className="diagram-svg" src={diagramSvgArray[activeIndex].url} alt=""/>
-                {isLoading ? <h1>helllo</h1> : (
-                    <div className="title">{nodesArray[activeIndex][nodesArray[activeIndex].length - 1].route} - {nodesArray[activeIndex][0].route}</div>
-                )}
+                <div className="title">{nodesArray[activeIndex][nodesArray[activeIndex].length - 1].name} - {nodesArray[activeIndex][0].name}</div>
                 <div className={`time ${durations[activeIndex] > 100 ? 'time--red' : 'time--green'}`}>{durations[activeIndex]} мин</div>
             </div>
             <Collapse defaultActiveKey={['1']} className="collapse" expandIconPosition="right" bordered={false}>
                 <Panel header={header()} key="1">
                     <div className="panel">
                         <div className="dashed-line"></div>
-                        {!isLoading && nodesArray[activeIndex].slice().reverse().filter(live => !live.noLive).map((node) => (
+                        {nodesArray[activeIndex].slice().reverse().filter(live => !live.noLive).map((node) => (
                             <div className="panel__item">
                                 <img src={node.img} alt="image"/>
-                                <span>{node.route}</span>
+                                <span>{node.name}</span>
                             </div>
                         ))}
                     </div>

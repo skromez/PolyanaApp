@@ -21,7 +21,7 @@ export const MainLayout: FC = ({children}) => {
                     <img src={logo} alt="logo"/>
                 </header>
                 <div onClick={() => {
-                    if (randomIndex === 3) {
+                    if (randomIndex >= 2) {
                         setRandomIndex(0)
                     } else {
                         setRandomIndex(randomIndex + 1)

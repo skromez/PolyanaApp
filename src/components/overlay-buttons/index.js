@@ -5,8 +5,6 @@ import {useHistory} from "react-router-dom";
 
 export const OverlayButtons = ({randomIndex}) => {
     const history = useHistory()
-    useEffect(() => {
-    })
     const buttonsArray = [
             {
                 color: '#FFE456',
@@ -75,8 +73,8 @@ export const OverlayButtons = ({randomIndex}) => {
             route: false
         },
     ];
+    console.log(randomIndex)
     const buttons = [buttonsArray, buttonsArray2, buttonsArray3]
-    const getRandomIndex = () => Math.floor(Math.random() * 3)
     return (
         <div className="ant-modal-content">
             <div className="overlay">
