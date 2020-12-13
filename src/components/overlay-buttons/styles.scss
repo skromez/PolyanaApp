@@ -1,0 +1,23 @@
+.overlay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .button-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 39%;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 100%;
+  }
+}
