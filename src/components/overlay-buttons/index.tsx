@@ -18,13 +18,13 @@ export const OverlayButtons: FC = () => {
             },
             {
                 color: 'white',
-                text: 'интср',
+                text: 'Горки',
                 route: '/'
             },
             {
                 color: '#FD3E3E',
                 text: 'Еда',
-                route: '/aaa'
+                route: PageLinks.PLACES,
             },
         ];
     return (

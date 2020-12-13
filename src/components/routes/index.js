@@ -3,7 +3,13 @@ import {Button, Collapse, Drawer, Modal} from 'antd'
 import {scaleLinear} from 'd3-scale'
 import {useSwipeable} from "react-swipeable";
 
-import wolfrock from '../../assets/images/wolf-rock.png'
+import wolfrock from '../../assets/images/wolfrock.jfif';
+import kavexpress from '../../assets/images/kavexpress.jfif';
+import tundra from '../../assets/images/tundra.jfif';
+import driada from '../../assets/images/driada.jfif';
+import kvartet from '../../assets/images/kvartet.jfif';
+import podsadka from '../../assets/images/podsadka.jfif';
+import beseda from '../../assets/images/beseda.jfif';
 import './styles.scss'
 
 const { Panel } = Collapse;
@@ -43,35 +49,35 @@ export const Routes = () => {
 
     const nodesArray = [
         [
-            { x: 45, y: 15, route: 'остановка 6', black: true, dot: true, img: wolfrock },
-            { x: 35, y: 40, route: 'остановка 5', img: wolfrock },
-            { x: 50, y: 62, route: 'остановка 4', transition: true, img: wolfrock },
-            { x: 60, y: 65, route:'остановка 3', img: wolfrock },
-            { x: 40, y: 85, route: 'остановка 2', white: true, transition: true, img: wolfrock },
-            { x: 33, y: 80, route: 'остановка 1', white: true, transition: true, img: wolfrock }
+            { x: 45, y: 15, route: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
+            { x: 35, y: 40, route: 'Подсадка 1600м', img: wolfrock, noLive: true },
+            { x: 50, y: 62, route: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
+            { x: 60, y: 65, route: 'Беседа 1350м', img: wolfrock, noLive: true },
+            { x: 40, y: 85, route: 'Беседа 940м', white: true, transition: true, img: beseda },
+            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
         ],
         [
-            { x: 45, y: 15, transition: true, black: true, route: 'остановка 5', img: wolfrock },
-            { x: 28, y: 5, black: true, route: 'остановка 4', img: wolfrock },
-            { x: 12, y: 37, route:'остановка 3', img: wolfrock },
-            { x: 23, y: 81, route: 'остановка 2', white: true, transition: true, img: wolfrock },
-            { x: 33, y: 80, route: 'остановка 1', white: true, img: wolfrock }
+            { x: 45, y: 15, transition: true, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
+            { x: 28, y: 5, black: true, route: 'Тундра 2220м', img: wolfrock, noLive: true },
+            { x: 12, y: 37, route: 'Тундра 1645м', img: tundra },
+            { x: 23, y: 81, route: 'Дриада 940м', white: true, transition: true, img: driada },
+            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock, noLive: true }
         ],
         [
-            { x: 45, y: 15, black: true, route: 'остановка 5', img: wolfrock },
-            { x: 35, y: 40, route: 'остановка 5', dot: true, img: wolfrock },
-            { x: 50, y: 62, route:'остановка 3', transition: true, img: wolfrock },
-            { x: 43, y: 60, route: 'остановка 2', img: wolfrock },
-            { x: 33, y: 80, route: 'остановка 1', white: true, img: wolfrock }
+            { x: 45, y: 15, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
+            { x: 35, y: 40, route: 'Подсадка 1600м', dot: true, img: wolfrock, noLive: true },
+            { x: 50, y: 62, route: 'Кавказский экспресс 1350м', transition: true, img: kavexpress },
+            { x: 43, y: 60, route: 'Волчья Скала 1350м', img: wolfrock, noLive: true },
+            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock }
         ],
         [
-            { x: 45, y: 15, route: 'остановка 7', black: true, dot: true, img: wolfrock },
-            { x: 35, y: 40, route: 'остановка 6', transition: true, img: wolfrock },
-            { x: 50, y: 47, route: 'остановка 5', img: wolfrock },
-            { x: 63, y: 60, route: 'остановка 4', transition: true, img: wolfrock },
-            { x: 60, y: 65, route: 'остановка 3', img: wolfrock },
-            { x: 40, y: 85, route: 'остановка 2', white: true, transition: true, img: wolfrock },
-            { x: 33, y: 80, route: 'остановка 1', white: true, transition: true, img: wolfrock }
+            { x: 45, y: 15, route: 'Роза Пик 2320м', black: true, dot: true, img: wolfrock, noLive: true },
+            { x: 35, y: 40, route: 'Подсадка 1600м', transition: true, img: podsadka },
+            { x: 50, y: 47, route: 'Квартет 1600м', img: wolfrock, noLive: true },
+            { x: 63, y: 60, route: 'Квартет 1350м', transition: true, img: kvartet },
+            { x: 60, y: 65, route: 'Беседа 1350м', img: wolfrock, noLive: true },
+            { x: 40, y: 85, route: 'Беседа 940м', white: true, transition: true, img: beseda },
+            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
         ],
     ]
 
@@ -250,7 +256,7 @@ export const Routes = () => {
                 <Panel header={header()} key="1">
                     <div className="panel">
                         <div className="dashed-line"></div>
-                        {nodesArray[activeIndex].map((node) => (
+                        {nodesArray[activeIndex].slice().reverse().filter(live => !live.noLive).map((node) => (
                             <div className="panel__item">
                                 <img src={node.img} alt="image"/>
                                 <span>{node.route}</span>
@@ -267,6 +273,7 @@ export const Routes = () => {
             >
                 <p>{route}</p>
                 <p>Куда</p>
+                <Button>Check-In</Button>
             </Drawer>
         </div>
     )

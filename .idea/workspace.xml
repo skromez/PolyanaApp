@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2969921-7d0f-4ef0-8a0d-8c1009160f5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/axios.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/overlay-buttons/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/overlay-buttons/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/places-nearby/places-nearby.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/places-nearby/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/routes/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/routes/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -73,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607787824429</updated>
       <workItem from="1607787828519" duration="3927000" />
-      <workItem from="1607791791595" duration="42165000" />
+      <workItem from="1607791791595" duration="47967000" />
     </task>
     <servers />
   </component>

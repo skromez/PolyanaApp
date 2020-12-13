@@ -40,47 +40,47 @@
   bottom: 0;
 }
 
-.approximate-time {
-  position: relative;
-  height: 500px;
-  background-color: var(--background);
+  .approximate-time {
+    position: relative;
+    height: 500px;
+    background-color: var(--background);
 
-  .title {
-    text-align: center;
-    position: absolute;
-    top: -31px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--red);
-    border-radius: 12px;
-    color: white;
-    padding: 10px 20px;
-    min-width: 240px;
-  }
+    .title {
+      text-align: center;
+      position: absolute;
+      top: -31px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--red);
+      border-radius: 12px;
+      color: white;
+      padding: 10px 20px;
+      min-width: 300px;
+    }
 
-  .time {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    border-radius: 12px;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 15px 30px;
-    background-color: black;
-    color: white;
-  }
+    .time {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      border-radius: 12px;
+      transform: translateX(-50%);
+      text-align: center;
+      padding: 15px 30px;
+      background-color: black;
+      color: white;
+    }
 
-  .route-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 34%;
-    font-size: 20px;
-    min-width: 160px;
-    transform: translateX(-51.5%) rotate(-90deg);
-  }
+    .route-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      top: 58%;
+      font-size: 20px;
+      min-width: 160px;
+      transform: translateX(-51.5%) rotate(-90deg);
+    }
 
-  .route-name {
+    .route-name {
     color: white;
     font-size: 16px;
   }
@@ -159,7 +159,7 @@
   .dashed-line {
     position: absolute;
     height: 100%;
-    left: 37%;
+    left: 25%;
     width: 5px;
     border: none;
     border-left: 3px dotted white;
@@ -172,10 +172,14 @@
       margin-bottom: 20px;
     }
     img {
+      max-width: 150px;
+      max-height: 97px;
       z-index: 2;
       margin-right: 25px;
     }
     span {
+      min-width: 150px;
+      max-width: 150px;
       font-weight: 400;
       color: white;
     }
