@@ -21,12 +21,11 @@ export const MainLayout: FC = ({children}) => {
                     <img src={logo} alt="logo"/>
                 </header>
                 <div onClick={() => {
-                    setRandomIndex((prev) => {
-                        if (prev === Math.floor(Math.random() * 3)) {
-                            return prev++
-                        }
-                        return Math.floor(Math.random() * 3)
-                    })
+                    if (randomIndex === 3) {
+                        setRandomIndex(0)
+                    } else {
+                        setRandomIndex(randomIndex + 1)
+                    }
                     setIsOpened(true)
                     setSuperButton(false);
                 }} className={`superbutton ${isSuperButtonShown ? 'superbutton--opened' : ''}`}>
