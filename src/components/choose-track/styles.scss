@@ -1,12 +1,26 @@
 .choose-track {
   padding-top: 70px;
   position: relative;
+  img {
+    width: 100%;
+  }
 }
 
 .inputs {
-  bottom: 0px;
-  position: absolute;
+  padding: 30px;
   width: 100%;
-  height: 400px;
+  height: 260px;
   background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  input {
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  button {
+    border-radius: 12px;
+    width: 100%;
+  }
 }

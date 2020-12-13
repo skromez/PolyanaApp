@@ -80,11 +80,11 @@ export const Routes = () => {
             { x: 33, y: 80, name: 'Волчья Скала 940м', white: true, transition: true, img: wolfrock, noLive: true }
         ],
         [
-            { x: 45, y: 15, transition: true, black: true, route: 'Роза Пик 2320м', img: wolfrock, noLive: true },
-            { x: 28, y: 5, black: true, route: 'Тундра 2220м', img: wolfrock, noLive: true },
-            { x: 12, y: 37, route: 'Тундра 1645м', img: tundra },
-            { x: 23, y: 81, route: 'Дриада 940м', white: true, transition: true, img: driada },
-            { x: 33, y: 80, route: 'Волчья Скала 940м', white: true, img: wolfrock, noLive: true }
+            { x: 45, y: 15, transition: true, black: true, name: 'Роза Пик 2320м', img: wolfrock, noLive: true },
+            { x: 28, y: 5, black: true, name: 'Тундра 2220м', img: wolfrock, noLive: true },
+            { x: 12, y: 37, name: 'Тундра 1645м', img: tundra },
+            { x: 23, y: 81, name: 'Дриада 940м', white: true, transition: true, img: driada },
+            { x: 33, y: 80, name: 'Волчья Скала 940м', white: true, img: wolfrock, noLive: true }
         ],
     ]
 

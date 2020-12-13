@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2969921-7d0f-4ef0-8a0d-8c1009160f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/choose-track/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/choose-track/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/overlay-buttons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/overlay-buttons/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/bgempty.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/bgempty.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/choose-track/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choose-track/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/choose-track/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choose-track/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/main-layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main-layout/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607787824429</updated>
       <workItem from="1607787828519" duration="3927000" />
-      <workItem from="1607791791595" duration="64066000" />
+      <workItem from="1607791791595" duration="66069000" />
     </task>
     <servers />
   </component>

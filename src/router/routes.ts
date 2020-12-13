@@ -17,16 +17,16 @@ export const routes = [
         layout: MainLayout,
         component: Chat,
     },
-    // {
-    //     path: '/choose-track',
-    //     exact: true,
-    //     layout: MainLayout,
-    //     component: ChooseTrack,
-    // },
+    {
+        path: '/routes',
+        exact: true,
+        layout: MainLayout,
+        component: Routes,
+    },
     {
         path: '/',
         exact: true,
         layout: MainLayout,
-        component: Routes,
+        component: ChooseTrack,
     },
 ]
